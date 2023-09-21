@@ -11,17 +11,25 @@
                 ;
                 font-size: larger;
             }
-            button
+            myButton
             {
-                color: blueviolet;
-                font-family:'Courier New', Courier, monospace;
-                background-color:violet;
-                font-size: large;
+                cursor: focus;
+                text-align: center;
             }
         </style>
+
+      
     </head>
     <body>
         <p>This is the <b>button</b></p>
-        <button class="button">Click Me</button>
+
+        <script>
+            var clickMeButton = document.createElement('button');
+            clickMeButton.id = 'myButton';
+            clickMeButton.innerHTML = 'Click Me';
+            clickMeButton.style.color = '#4FFF9F';
+            clickMeButton.style.fontFamily = 'Lucida Sans';
+            document.body.appendChild(clickMeButton);
+        </script>
     </body>
 </html>
