@@ -1,54 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title> Button Practice </title>
+    <title>Page Title</title>
+
     <style>
-        p {
-            color: blue;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: larger;
-        }
-
-        .button {
+        .buttonClass {
+            color: #4CAF50;
             cursor: pointer;
-            background: #4FFF8F;
-            text-align: center;
-        }
-
-        #htmlButton1 {
-            font-weight: bold;
-        }
-
-        #htmlButton2 {
-            font-style: italic;
-        }
-
-        #jsButton {
-            font-weight: bold;
-            font-style: italic;
         }
     </style>
-
-
 </head>
 
 <body>
-    <p>This is the <b>button</b></p>
-
-    <button class="button" id="htmlButton1">I'm an html Button! </button>
-    <button class="button" id="htmlButton2">I'm an html Button! </button>
+    <button id="buttonId" class="buttonClass">I am a button!</button>
 
     <script>
-        var jsButton = document.createElement('button');
-        jsButton.innerHTML = "I'm an Js Button";
-        jsButton.id = 'jsButton';
-        jsButton.className = 'button';
-        document.body.appendChild(jsButton)
-
-        var htmlBtn2 = document.getElementById('htmlButton2');
-        htmlBtn2.innerHTML = 'I\'m a modified HTML button!';
+        var button = document.getElementById('buttonId');
+        button.onclick = function()
+        {
+            button.innerHTML = 'You clicked Me!'
+        }
     </script>
 </body>
 
