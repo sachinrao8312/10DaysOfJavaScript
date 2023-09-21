@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Button Practice </title>
-        <style>
-            p 
-            {
-                color: blue;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-                ;
-                font-size: larger;
-            }
-            myButton
-            {
-                cursor: focus;
-                text-align: center;
-            }
-        </style>
 
-      
-    </head>
-    <body>
-        <p>This is the <b>button</b></p>
+<head>
+    <meta charset="UTF-8">
+    <title> Button Practice </title>
+    <style>
+        p {
+            color: blue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: larger;
+        }
 
-        <script>
-            var clickMeButton = document.createElement('button');
-            clickMeButton.id = 'myButton';
-            clickMeButton.innerHTML = 'Click Me';
-            clickMeButton.style.color = '#4FFF9F';
-            clickMeButton.style.fontFamily = 'Lucida Sans';
-            document.body.appendChild(clickMeButton);
-        </script>
-    </body>
+        .button {
+            cursor: pointer;
+            background: #4FFF8F;
+            text-align: center;
+        }
+
+        #htmlButton1 {
+            font-weight: bold;
+        }
+
+        #htmlButton2 {
+            font-style: italic;
+        }
+
+        #jsButton {
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <p>This is the <b>button</b></p>
+
+    <button class="button" id="htmlButton1">I'm an html Button! </button>
+    <button class="button" id="htmlButton2">I'm an html Button! </button>
+
+    <script>
+        var jsButton = document.createElement('button');
+        jsButton.innerHTML = "I'm an Js Button";
+        jsButton.id = 'jsButton';
+        jsButton.className = 'button';
+        document.body.appendChild(jsButton)
+
+        var htmlBtn2 = document.getElementById('htmlButton2');
+        htmlBtn2.innerHTML = 'I\'m a modified HTML button!';
+    </script>
+</body>
+
 </html>
